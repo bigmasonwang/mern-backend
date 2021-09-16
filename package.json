@@ -3,7 +3,13 @@
   "version": "0.0.0",
   "description": "goexpert peoject backend",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "*.js": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css,scss,sass,md}": "prettier --write"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
